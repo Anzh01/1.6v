@@ -1,0 +1,271 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes'), url(../fonts/TTLakes-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes'), url(../fonts/TTLakes-Medium.ttf);
+    font-weight: 500;
+    font-style: bolder;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: local('TT Lakes'), url(../fonts/TTLakes-Bold.ttf);
+    font-weight: 700;
+    font-style: bold;
+    font-display: swap;
+}
+
+:root {
+    --text-font-family: 'TT Lakes';
+    --text-size: 16px;
+    --text-color: #1B1C21;
+    --text-active-color: ;
+    --bg-color: #F8F8F8;
+    --icon-color: #FF3E79;
+    --shadow-color: #D9FFF5;
+    --text-placard-color: #41F6D7;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-block: 0;
+}
+
+h1 {
+    margin-block: 0;
+}
+
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+body {
+    font-family: var(--text-font-family);
+    font-size: 14px;
+    background-color: var(--bg-color);
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1120px;
+    margin: auto;
+}
+
+.side-shadow::before {
+    content: '';
+    background-color: #fff;
+    opacity: 0.96;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 24px;
+}
+
+
+.main__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main__text_text-paragraph {
+    padding: 0 16px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: var(--text-color);
+    height: 90px;
+    overflow: hidden;
+    margin: 0;
+    
+    transition: height 0.5s; 
+}
+
+.main__text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.main__text_close {
+    height: 90px;
+}
+
+.main__text_open {
+    height: 370px;
+}
+
+.main__button_read-more {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 134px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2;
+    color: var(--text-color);
+    margin: 0 16px;
+}
+
+.main__button_read-more::before {
+    content: '';
+    background-image: url(../img/icon.svg);
+    height: 10px;
+    width: 8px;
+}
+
+.main__button_read-more_open {
+    width: 90px;
+}
+
+.main__button_read-more_open::before {
+    content: '';
+    background-image: url(../img/icon.svg);
+    height: 10px;
+    width: 8px;
+    transform: rotate(180deg);
+}
+
+.read-more_icon {
+    padding-right: 16px;
+}
+
+.main__image {
+    margin-left: 0;
+}
+
+.main__image img {
+    height: 230px;
+    width: 320px;
+}
+
+.additional {
+    padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+
+    .main-container {
+        padding-left: 24px;
+    }
+
+    .main__info {
+        flex-direction: row;
+        gap: 24px; 
+    }
+
+    .main__text_text-paragraph {
+        padding: 0;
+        margin-block: 0;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: var(--text-color);
+        height: 160px;
+    }
+
+    .main__text_close {
+        height: 160px;
+    }
+    
+    .main__text_open {
+        height: 350px;
+    }
+
+    .main__image {
+        margin-right: 25px;
+    }
+
+    .main__image img {
+        border-radius: 6px;
+        height: 259px;
+        width: 360px;
+    } 
+
+    .main__button_read-more {
+        margin-top: 1em;
+    }
+
+    .additional {
+        padding: 0 24px;
+    }
+}
+
+@media (min-width: 1120px) {
+
+    .main-container {
+        padding-left: 34px;
+    }
+
+    .main__text_text-paragraph {
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: var(--text-color);
+        height: 180px;
+    }
+
+    .main__text_close {
+        height: 180px;
+    }
+    
+    .main__text_open {
+        height: 250px;
+    }
+
+
+    .main__info {
+        gap: 36px;
+    }
+
+    .main__image {
+        margin-right: 25px;      
+    }
+
+    .main__image img {
+        border-radius: 6px;
+        height: 307px;
+        width: 531.35px;
+    }
+
+    .additional {
+        padding: 0 34px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1120px;
+        margin-right: auto;
+        margin-left: 320px;
+    }
+}

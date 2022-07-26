@@ -1,0 +1,30 @@
+@import './styles-menu.css';
+@import './side-form.css';
+@import './brands.css';
+@import './styles.css';
+@import './header.css';
+@import './nav.css';
+@import './swiper.css';
+@import './footer.css';
+@import './additional.css';
+@import '../../node_modules/normalize.css/normalize.css';
+@import '../../node_modules/swiper/swiper.scss';
+
+.swiper {
+  &-pagination {
+    display: block; //изменяем тип отображения на flex-контейнер
+    justify-content: center; //центрируем bullets по горизонтали
+
+    &-bullet {
+      height: 12px; // устанавливаем высоту bullets на 12 px
+      width: 12px;  // устанавливаем ширину bullets на 12 px
+      background: #DDD;  // устанавливаем цвет неактивных bullets
+      border-radius: 50%;  // делаем их круглыми
+      margin: 0 6px;  // устанавливаем отступ по горизонтали в 6px
+
+      &-active {
+        background: #B5B6BC; //устанавливем цвет для активных bullets
+      }
+    }
+  }
+}

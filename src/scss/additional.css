@@ -1,0 +1,33 @@
+.additional {
+    width: 288px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.commercial {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commercial__text {
+    font-weight: bolder;
+    position: relative;
+}
+
+.commercial__text::after {
+    content: '';
+    background: url(../img/Line.svg) no-repeat;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: -20px;
+    top: 3px;
+}
+
+@media (min-width: 768px) {
+    .additional {
+        width: 50vw;
+    }
+}
