@@ -140,10 +140,17 @@
     transition: 1s;
 }
 
+@media (min-width: 360px) {
+    .side-menu {
+        width: 360px;
+    }    
+}
+
 @media (min-width: 1120px) {
     .side-menu {
         justify-content: flex-start;
         gap: 280px;
+        width: 320px;
     }
 
 }
@@ -151,10 +158,16 @@
 @media (min-width: 1440px) {
     .side-menu {
         box-shadow: none;
+        
+    }
+
+    .side-menu.hidden {
+        left: 0;
     }
 
     .side-form__button.hidden {
         display: none;
+        
     }
     
 }
@@ -415,6 +428,12 @@ button {
     cursor: pointer;
   }
 
+button:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: 0.5s all;
+}
+
 body {
     font-family: var(--text-font-family);
     font-size: 14px;
@@ -427,17 +446,6 @@ body {
     margin: auto;
 }
 
-.side-shadow::before {
-    content: '';
-    background-color: #fff;
-    opacity: 0.96;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-}
 
 .main-container {
     display: flex;
@@ -576,6 +584,19 @@ body {
     .additional {
         padding: 0 24px;
     }
+
+    .side-shadow::before {
+        content: '';
+        background-color: #fff;
+        opacity: 0.96;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+    
 }
 
 @media (min-width: 1120px) {
@@ -709,6 +730,10 @@ body {
     left: -16px;
     background-color: var(--text-placard-color);
     border-radius: 0 10px 10px 0;
+}
+
+.header__icons_right-side_hidden {
+    display: none;
 }
 
 @media (min-width: 768px) {
@@ -860,17 +885,6 @@ body {
     display: flex;
     flex-direction: row;
 }
-/* 
-.swiper-container::after {
-    content: ' ';
-    height: 84px;
-    width: 24px;
-    position: absolute;
-    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
-    z-index: 10;
-    right: -10px;
-    top: 0;
-} */
 
 li.swiper-slide {
     background-color: #ffffff;
@@ -910,21 +924,6 @@ li.swiper-slide {
     left: 40%;
     transform: rotate(45deg);
 }
-/* 
-.swiper-pagination {
-    position: relative;
-    top: 16px;
-}
-
-.swiper-pagination-bullet {
-    background-color: #ddd;
-    width: 12px;
-    height: 12px;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #B5B6BC;
-} */
 
 .services_additional .swiper-slide {
     height: 165px;
@@ -965,6 +964,7 @@ li.swiper-slide {
     position: relative;
     align-items: center;
     align-self: flex-end;
+    font-size: 12px;
 }
 
 .swiper-slide_services-title>.swiper-slide-title {
@@ -1003,6 +1003,7 @@ li.swiper-slide {
         display: grid;
         gap: 0;
     }
+    
     .swiper-slide.swiper-slide_services {
         flex-direction: row;
         width: 100%;
@@ -1015,19 +1016,17 @@ li.swiper-slide {
         display: none;
     }
     
-    .swiper-slide-with-button {
+    .swiper-slide-with-button,
+    .swiper-slide_services-title {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap: 10px;
+        gap: 40px;
         align-items: center;
     }
 
     .swiper-slide_services-title>.swiper-slide-title {
-        display: inline-grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
-    
+        display: inline-block;
     }
     
     .swiper-slide__button {
@@ -1035,7 +1034,7 @@ li.swiper-slide {
         height: 32px;
         width: 119px;
         text-transform: uppercase;
-        font-weight: bolder;
+        font-weight: 500;
         border-radius: 16px;
         color:#fff;
         display: flex;
@@ -1043,6 +1042,10 @@ li.swiper-slide {
         position: relative;
         align-items: center;
         align-self: flex-end;
+    }
+
+    .swiper-pagination {
+        display: none;
     }
 
 }
@@ -1081,11 +1084,24 @@ li.swiper-slide {
         padding: 10px 20px 10px 20px;
         flex-direction: row;
         gap: 5px;
-        justify-items: baseline;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .footer>span {
         width: 200px;
+    }
+
+    .footer :first-child {
+        text-align: start;
+    }
+
+    .footer :nth-child(2) {
+        text-align: center;
+    }
+
+    .footer :last-child {
+        text-align: end;
     }
 }
 .additional {
@@ -1485,7 +1501,6 @@ template {
   */ }
 
 .swiper-pagination {
-  text-align: center;
   transition: 300ms opacity;
   transform: translate3d(0, 0, 0);
   z-index: 10;
