@@ -277,3 +277,11 @@ body {
         margin-left: 320px;
     }
 }
+
+@media (min-width: 1760px) {
+    .container {
+        max-width: 1120px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
