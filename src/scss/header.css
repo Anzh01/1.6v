@@ -83,6 +83,10 @@
     border-radius: 0 10px 10px 0;
 }
 
+.header__icons_right-side_hidden {
+    display: none;
+}
+
 @media (min-width: 768px) {
     .header__icons_right-side_hidden {
         display: contents;

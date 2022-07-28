@@ -2,6 +2,8 @@ import '../scss/style.scss';
 import '../js/brands.js';
 import '../js/side-menu.js';
 import '../js/side-form.js';
+import '../js/main__buttons.js'
+
 import Swiper, {Navigation, Pagination} from 'swiper';
 Swiper.use([Navigation, Pagination]);
 window.onload =  () => { 

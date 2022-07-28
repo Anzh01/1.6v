@@ -140,10 +140,17 @@
     transition: 1s;
 }
 
+@media (min-width: 360px) {
+    .side-menu {
+        width: 360px;
+    }    
+}
+
 @media (min-width: 1120px) {
     .side-menu {
         justify-content: flex-start;
         gap: 280px;
+        width: 320px;
     }
 
 }
@@ -151,10 +158,16 @@
 @media (min-width: 1440px) {
     .side-menu {
         box-shadow: none;
+        
+    }
+
+    .side-menu.hidden {
+        left: 0;
     }
 
     .side-form__button.hidden {
         display: none;
+        
     }
     
 }

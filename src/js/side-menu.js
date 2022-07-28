@@ -24,6 +24,7 @@ function watchWindow () {
     }
 }
 
-window.addEventListener('resize', watchWindow)
+watchWindow();
+window.addEventListener('resize', watchWindow);
 
 

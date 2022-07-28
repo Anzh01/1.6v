@@ -15,10 +15,23 @@
         padding: 10px 20px 10px 20px;
         flex-direction: row;
         gap: 5px;
-        justify-items: baseline;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .footer>span {
         width: 200px;
+    }
+
+    .footer :first-child {
+        text-align: start;
+    }
+
+    .footer :nth-child(2) {
+        text-align: center;
+    }
+
+    .footer :last-child {
+        text-align: end;
     }
 }

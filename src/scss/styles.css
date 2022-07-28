@@ -58,6 +58,12 @@ button {
     cursor: pointer;
   }
 
+button:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+    transition: 0.5s all;
+}
+
 body {
     font-family: var(--text-font-family);
     font-size: 14px;
@@ -70,17 +76,6 @@ body {
     margin: auto;
 }
 
-.side-shadow::before {
-    content: '';
-    background-color: #fff;
-    opacity: 0.96;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
-}
 
 .main-container {
     display: flex;
@@ -219,6 +214,19 @@ body {
     .additional {
         padding: 0 24px;
     }
+
+    .side-shadow::before {
+        content: '';
+        background-color: #fff;
+        opacity: 0.96;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+    
 }
 
 @media (min-width: 1120px) {
