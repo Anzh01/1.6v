@@ -20,7 +20,7 @@
 }
 
 .side-menu__container {
-    min-height: 90vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -146,7 +146,7 @@
 .side-menu__lang_options li a:hover {
     color: #7E7E82;
     transform: scale(100%);
-    transition: 1s;
+    transition: 0.5s;
 }
 
 @media (min-width: 360px) {
