@@ -20,7 +20,7 @@
 }
 
 .side-menu__container {
-    min-height: 100%;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
