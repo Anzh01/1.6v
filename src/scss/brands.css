@@ -2,9 +2,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 16px;
     overflow-x: hidden;
     padding: 0 16px 0 16px;
+}
+
+.brands-services {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .services__title {

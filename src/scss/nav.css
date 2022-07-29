@@ -1,5 +1,6 @@
 .main__nav {
     overflow-x: hidden;
+    padding: inherit;
 }
 
 .main__nav-container {
